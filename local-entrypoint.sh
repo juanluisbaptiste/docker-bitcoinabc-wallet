@@ -1,7 +1,5 @@
 #!/bin/bash
-set -x
 env > .envrc
-. .envrc
+echo CMD="/home/user/bitcoin-abc/bin/bitcoin-qt" >> .envrc
 
-export CMD="/home/user/bitcoin-abc/bin/bitcoin-qt"
 . /entrypoint.sh
