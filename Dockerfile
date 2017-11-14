@@ -1,7 +1,7 @@
 FROM juanluisbaptiste/xpra-base:latest
 MAINTAINER Juan Luis Baptiste <juan.baptiste@gmail.com>
 ENV BTCABC_VERSION "0.16.1"
-ENV BTCABC_GUI_DOWNLOAD_URL https://download.bitcoinabc.org/0.16.1/result/linux/bitcoin-abc-${BTCABC_VERSION}-x86_64-linux-gnu.tar.gz
+ENV BTCABC_GUI_DOWNLOAD_URL https://download.bitcoinabc.org/${BTCABC_VERSION}/linux/bitcoin-abc-${BTCABC_VERSION}-x86_64-linux-gnu.tar.gz
 COPY local-entrypoint.sh /
 
 RUN apt-get update && \
