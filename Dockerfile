@@ -15,7 +15,8 @@ WORKDIR /home/user
 RUN curl ${BTCABC_GUI_DOWNLOAD_URL} -O
 RUN tar zxf bitcoin-abc-${BTCABC_VERSION}-x86_64-linux-gnu.tar.gz && \
     mv bitcoin-abc-${BTCABC_VERSION} bitcoin-abc && \
-    rm bitcoin-abc-${BTCABC_VERSION}-x86_64-linux-gnu.tar.gz
+    rm bitcoin-abc-${BTCABC_VERSION}-x86_64-linux-gnu.tar.gz && \
+    mkdir .bitcoin
 
 CMD ["/local-entrypoint.sh"]
 EXPOSE 10000
