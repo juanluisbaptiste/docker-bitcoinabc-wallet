@@ -5,7 +5,8 @@ ENV BTCABC_GUI_DOWNLOAD_URL https://download.bitcoinabc.org/${BTCABC_VERSION}/li
 COPY local-entrypoint.sh /
 
 RUN apt-get update && \
-    apt-get install -y curl zip libfontconfig1 libfreetype6 && \
+    apt-get install -y curl zip libfontconfig1 libfreetype6 \
+                       libegl1-mesa libgl1-mesa-glx && \
     apt-get clean && \
     useradd -ms /bin/bash -G xpra user && \
     chmod 755 /local-entrypoint.sh
